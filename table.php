@@ -48,9 +48,7 @@
 				{
 					echo "<td>".$i*$j."</td>";
 						
-						if($color==="yellow")$color="green";
-						else $color="yellow";
-					
+						
 					
 				}
 				
