@@ -2,7 +2,7 @@
 <html>
 <head>
        		<meta charset="utf-8" />
-		<title>Zadatak 1</title>
+		<title>Multiplication Table</title>
 		<style>
 		
 			table, th, td { border: solid 2px; }
