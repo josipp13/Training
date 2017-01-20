@@ -103,10 +103,10 @@ class Tram extends Vehicle{
 
 	private $line;
 	
-	public function __construct($name,$line)
+	public function __construct($name,$line,$x,$y)
 	{
 		$this->line=$line;
-		parent::__construct($name);			
+		parent::__construct($name,$x,$y);			
 		
 	
 	}
