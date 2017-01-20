@@ -7,7 +7,28 @@
 </head>
 <body>
 
-	<?php
+	<?php	
+		
+		function swap(&$x,&$y){
+			
+			$temp=$x;
+			$x=$y;
+			$y=$temp;
+		
+		}
+		
+		function my_sort(&$arr,$size){
+		
+			for($i=0;$i<$size-1;++$i)
+			for($j=$i+1;$j<$size;++$j)
+				if( strcmp( $arr[$i] , $arr[$j] ) > 0  )
+					swap($arr[$i],$arr[$j]);
+		
+		
+		
+		}
+	
+		
 		$str_numb=10; $str_len=5;
 		for($i=0;$i<$str_numb;++$i)
 		{	
@@ -36,21 +57,14 @@
 	</ul>
 	
 	<?php
-		for($i=0;$i<$str_numb-1;++$i)
-			for($j=$i+1;$j<$str_numb;++$j)
-				if( strcmp( $arr[$i] , $arr[$j] ) > 0  )
-				{
-					$temp=$arr[$i];
-					$arr[$i]=$arr[$j];	
-					$arr[$j]=$temp;
-				}
-		
+		my_sort($arr,$str_numb);
 	?>
 	
 	<p>Ordered strings</p>	
 	
 	<ol>	
 		<?php	
+			
 			for($i=0;$i<$str_numb;++$i)
 				echo "<li>".$arr[$i]."</li>";
 		
